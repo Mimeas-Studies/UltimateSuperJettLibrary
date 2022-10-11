@@ -1,6 +1,9 @@
 package com.github.mimeas_studies.usjlib;
 
+import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.util.resource.Resource;
+import org.eclipse.jetty.webapp.WebAppContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +17,17 @@ public class LibraryServer {
 
     public LibraryServer(int port) {
         server = new Server(port);
+        server.setHandler(createWebApp());
+    }
+
+    private WebAppContext createWebApp() {
+        WebAppContext webapp = new WebAppContext();
+        webapp.setContextPath("/");
+
+        Resource resource = Resource.newClassPathResource("/webapp");
+        webapp.setBaseResource(resource);
+
+        return webapp;
     }
 
     public URL getURL() throws MalformedURLException {

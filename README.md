@@ -5,7 +5,7 @@ Yeah no, don't actually use this for your library
 - [ ] Jetty webapp that serves a React app
   - [ ] Jetty that serves content from /webapp
     - [x] Start a server with Jetty
-    - [ ] Serve a static page
+    - [x] Serve a static page
     - [ ] Serve a servlet that returns a book
     - [ ] Serve an api endpoint that returns a book in JSON format
     - [ ] Introduce JAX-RS to serve a GET resource with jersey ServletContainer
