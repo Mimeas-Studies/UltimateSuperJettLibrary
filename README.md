@@ -4,7 +4,7 @@ Yeah no, don't actually use this for your library
 ## Programming steps
 - [ ] Jetty webapp that serves a React app
   - [ ] Jetty that serves content from /webapp
-    - [ ] Start a server with Jetty
+    - [x] Start a server with Jetty
     - [ ] Serve a static page
     - [ ] Serve a servlet that returns a book
     - [ ] Serve an api endpoint that returns a book in JSON format
